@@ -5,32 +5,138 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+
   
   <title>Frontend Mentor | Product preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      margin:0px;
+      padding:0px;
+      background-color: hsl(328, 54%, 93%)
+    }
+    .todo{
+      display:flex;
+      width: 520px;
+      height: 410px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 10px;
+      background-color: rgb(255, 255, 255);
+    }
+    .todo_seccion1_img{
+      width: 260px;
+      height: 410px;
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+    }
+    .todo_seccion2{
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    .todo_seccion2_texto_inicial{
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: hsl(228, 12%, 48%);
+      padding-top: 10px;
+
+    }
+    .todo_seccion2_titulo{
+      font-family: 'Fraunces', serif;
+      font-size: 27px;
+      font-weight: 700;
+      line-height: 28px;
+      width: 180px;
+    }
+    .todo_seccion2_descripcion{
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      line-height: 19px;
+      color: hsl(228, 12%, 48%);
+      font-weight: 500;
+      margin: 0%;
+    }
+    .todo_seccion2_costos{
+      display:flex;
+      margin: 0%;
+
+    }
+    .todo_seccion2_costos_letter1{
+      font-size: 27px;
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      color: hsl(158, 36%, 37%);
+
+    }
+    .todo_seccion2_costos_letter2{
+      padding-left: 20px;
+      padding-top: 22px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      color: hsl(228, 12%, 48%);
+      text-decoration:line-through;
+
+    }
+    
+    .todo_boton{
+    width: 100%;
+    height: 12%;
+    background-color:hsl(158, 36%, 37%);
+    border-style: none;
+    border-radius: 10px;
+    text-align: center;
+    color:#fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;}
+    .todo_boton_img{
+      padding-right: 10px;
+    }
+      
   </style>
 </head>
 <body>
-
-  Preview
-
-  Gabrielle Essence Eau De Parfum
-
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  Add to Cart
+  <header class="todo">
+    <section class="todo_seccion1">
+      <img class="todo_seccion1_img" src="../images/image-product-desktop.jpg">
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    </section>
+  
+    <section class="todo_seccion2">
+      <p class="todo_seccion2_texto_inicial">
+        PERFUME
+      </p>
+      <h1 class="todo_seccion2_titulo">
+        Gabrielle Essence Eau De Parfum
+      </h1>
+      <p class="todo_seccion2_descripcion">
+        A floral, solar and voluptuous interpretation composed by Olivier Polge,Perfumer-Creator for the House of CHANEL.
+  
+      </p>
+      <div class="todo_seccion2_costos">
+        <p class="todo_seccion2_costos_letter1">
+          $149.99
+        </p>
+        <p class="todo_seccion2_costos_letter2">
+          $169.99
+        </p>
+      </div>
+        <button class="todo_boton"> 
+          <svg class="todo_boton_img" width="15" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z" fill="#FFF"/></svg> 
+          Add to Cart </button>
+    </section>
+
+  </header>
+  
 </body>
 </html>
